@@ -1,21 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap');
 
 body {
-    font-family: 'Jost', sans-serif;
     font-size: 18px;
     background: #0b1316;
-    color: #ccc;
     height:100vh;
     margin:0;
 }
 
-#question {
+body, button {
     font-family: 'Jost', sans-serif;
-    color: #ddd;
+    letter-spacing: 1px;
+    color: #fff;
+}
+
+#question {
     font-size: 26px;
     font-weight: bold;
-    padding: 20px 20px 10px 20px;
     text-align: center;
+    padding: 20px 20px 10px 20px;
     opacity: 0;
     transition: opacity 2s;
 }
@@ -28,65 +30,56 @@ body {
 }
 
 .choice {
-    font-family: 'Jost', sans-serif;
-    letter-spacing: 1px;
     background: transparent;
-    border: 0;
     font-size: 17px;
-    display: inline-block;
+    border: 0;
     padding: 5px 12px;
-    color: #fff;
+    display: inline-block;
     cursor: pointer;
 }
 
 .choice:hover,
 #retry:hover {
-    opacity: .9;
     text-decoration: underline;
+    opacity: .85;
     transition: opacity 0.15s ease-in-out;
 }
 
 .choice.selected,
 #retry:active {
-    opacity: .95;
     text-decoration: underline;
+    opacity: .9;
     transition: opacity 0.15s ease-in-out;
 }
 
 #bottom-middle {
     position: fixed;
-    bottom: 0;
-    left: 50%;
+    inset: auto auto 0 50%;
     transform: translateX(-50%);
 }
 
 #retry {
-    font-family: 'Jost', sans-serif;
-    letter-spacing: 1px;
-    display: block;
+    font-size: 20px;
+    font-weight: bold;
     background: transparent;
+    display: block;
     max-width: 150px;
     width: 100%;
     margin: 20px auto;
     padding: 10px 15px;
     border: 2px solid #ccc;
-    color: #fff;
-    opacity: 0.7;
-    font-size: 20px;
-    font-weight: bold;
     cursor: pointer;
+    opacity: 0.75;
     transition: opacity 0.15s ease-in-out;
 }
 
-
 #score {
-    font-size: 15px;
-    letter-spacing: 1px;
+    font-size: 16px;
     font-weight: bold;
     text-align: center;
     padding-bottom: 20px;
     margin: 0 auto;
-    color: #ccc;
+    opacity: 0.75;
 }
 
 /* #bgimage {
