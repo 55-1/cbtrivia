@@ -353,15 +353,6 @@ const questions = [
     ]
   },
   {
-    question: "Who found baby Moses in a basket on the river?",
-    answers: [
-      { text: "Miriam", correct: false },
-      { text: "Ruth", correct: false },
-      { text: "Esther", correct: false },
-      { text: "Jochebed", correct: true }
-    ]
-  },
-  {
     question: "Where was Jesus born?",
     answers: [
       { text: "Nazareth", correct: false },
