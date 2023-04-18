@@ -25,7 +25,6 @@ button {
 
 #choices {
     margin-bottom: 0;
-    text-align: center;
     opacity: 0;
     transition: opacity 2s;
 }
@@ -34,8 +33,9 @@ button {
     background: transparent;
     font-size: 18px;
     border: 0;
+    margin:auto;
     padding: 5px 12px;
-    display: inline-block;
+    display: block;
     cursor: pointer;
 }
 
@@ -89,22 +89,22 @@ button {
     width: 100%;
     height: 100%;
     opacity: 0;
-    background: url("images/background.jpg") no-repeat;
-    background-size: contain;
     transition: opacity 2s;
+    z-index:-1;
 }
 
-@media screen and (max-width: 660px) {
+@media screen and (max-width: 720px) {
     #question {
         font-size: 22px;
     }
     .choice {
-        font-size: 18px;
+        font-size: 17px;
         margin: auto;
         display: block;
     }
     #bgimage {
-        width: 70%;
-        height: 70%;
+        inset: auto auto 0 0;
+        width: 50%;
+        height: 50%;
     }
 }

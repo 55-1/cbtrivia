@@ -1,5 +1,15 @@
 const questions = [
   {
+    question: "How many days did God take to create the world?",
+    answers: [
+      { text: "6", correct: true },
+      { text: "7", correct: false },
+      { text: "5", correct: false },
+      { text: "4", correct: false }
+    ]
+  },
+  
+  {
     question: "Who is the first woman created by God?",
     answers: [
       { text: "Eve", correct: true },
@@ -9,14 +19,186 @@ const questions = [
     ]
   },
   {
-    question: "What is the last book of the New Testament?",
+    question: "Who was the first man?",
     answers: [
-      { text: "Revelation", correct: true },
-      { text: "Acts", correct: false },
-      { text: "Romans", correct: false },
-      { text: "Hebrews", correct: false }
+      { text: "Adam", correct: true },
+      { text: "Abraham", correct: false },
+      { text: "Moses", correct: false },
+      { text: "Noah", correct: false }
     ]
   },
+  {
+    question: "Where did Adam and Eve live at the beginning of the world?",
+    answers: [
+      { text: "Garden of Eden", correct: true },
+      { text: "Babylon", correct: false },
+      { text: "Jerusalem", correct: false },
+      { text: "Egypt", correct: false }
+    ]
+  },
+  {
+    question: "How many days and nights did it rain when Noah was on the ark?",
+    answers: [
+      { text: "20", correct: false },
+      { text: "30", correct: false },
+      { text: "40", correct: true },
+      { text: "50", correct: false }
+    ]
+  },
+  {
+    question: "What was God’s sign to Noah that he would never destroy the earth again?",
+    answers: [
+      { text: "A flood", correct: false },
+      { text: "A rainbow", correct: true },
+      { text: "A dove", correct: false },
+      { text: "A fire", correct: false }
+    ]
+  },
+  {
+    question: "How many brothers did Joseph have?",
+    answers: [
+      { text: "10", correct: false },
+      { text: "11", correct: true },
+      { text: "12", correct: false },
+      { text: "13", correct: false }
+    ]
+  },
+  {
+    question: "How did Moses’ mother save him from the Egyptian soldiers?",
+    answers: [
+      { text: "She hid him in the house", correct: false },
+      { text: "She sent him to a different country", correct: false },
+      { text: "She put him in a basket in the river", correct: true },
+      { text: "She dressed him up as a girl", correct: false }
+    ]
+  },
+  {
+    question: "Through what did God speak to Moses in the desert?",
+    answers: [
+      { text: "A burning bush", correct: true },
+      { text: "A talking animal", correct: false },
+      { text: "A pillar of fire", correct: false },
+      { text: "A cloud", correct: false }
+    ]
+  },
+  {
+    question: "What did Moses say God commanded the Pharaoh to do?",
+    answers: [
+      { text: "Build a temple", correct: false },
+      { text: "Free his people", correct: true },
+      { text: "Offer a sacrifice", correct: false },
+      { text: "Declare war", correct: false }
+    ]
+  },
+  {
+    question: "How many plagues did God send on Egypt?",
+    answers: [
+      { text: "5", correct: false },
+      { text: "7", correct: false },
+      { text: "9", correct: false },
+      { text: "10", correct: true }
+    ]
+  },
+  {
+    question: "What was the final plague that convinced Pharaoh to let the slaves go?",
+    answers: [
+      { text: "Locusts", correct: false },
+      { text: "Hail", correct: false },
+      { text: "Darkness", correct: false },
+      { text: "The firstborn son of all Egyptian families died", correct: true }
+    ]
+  },
+  {
+    question: "Before Jesus started preaching, what was his job?",
+    answers: [
+      { text: "Fisherman", correct: false },
+      { text: "Shepherd", correct: false },
+      { text: "Carpenter", correct: true },
+      { text: "Farmer", correct: false }
+    ]
+  },
+  {
+    question: "What golden image did the Israelites make at Mt. Sinai?",
+    answers: [
+      { text: "A golden bull", correct: true },
+      { text: "A golden eagle", correct: false },
+      { text: "A golden snake", correct: false },
+      { text: "A golden lamb", correct: false }
+    ]
+  },
+  {
+    question: "At a wedding, what did Jesus turn water into?",
+    answers: [
+      { text: "Milk", correct: false },
+      { text: "Wine", correct: true },
+      { text: "Juice", correct: false },
+      { text: "Soda", correct: false }
+    ]
+  },  
+  {
+    question: "Name the place where Jesus walked on water?",
+    answers: [
+      { text: "Jordan River", correct: false },
+      { text: "Dead Sea", correct: false },
+      { text: "Mediterranean Sea", correct: false },
+      { text: "Sea of Galilee", correct: true }
+    ]
+  },
+  {
+    question: "How many disciples did Jesus choose?",
+    answers: [
+      { text: "10", correct: false },
+      { text: "11", correct: false },
+      { text: "12", correct: true },
+      { text: "13", correct: false }
+    ]
+  },
+  {
+    question: "How much bread and fish did Jesus use to feed more than 5,000 people?",
+    answers: [
+      { text: "Ten loaves of bread and five fish", correct: false },
+      { text: "Five loaves of bread and two fish", correct: true },
+      { text: "Three loaves of bread and four fish", correct: false },
+      { text: "Eight loaves of bread and three fish", correct: false }
+    ]
+  },
+  {
+    question: "What four books tell about Jesus' life on Earth?",
+    answers: [
+      { text: "Matthew, Mark, Luke, John", correct: true },
+      { text: "Acts, Romans, Corinthians, Galatians", correct: false },
+      { text: "Genesis, Exodus, Leviticus, Numbers", correct: false },
+      { text: "Psalms, Proverbs, Ecclesiastes, Song of Solomon", correct: false }
+    ]
+  },
+  {
+    question: "Which book did Jesus directly write?",
+    answers: [
+      { text: "Matthew", correct: false },
+      { text: "Mark", correct: false },
+      { text: "Luke", correct: false },
+      { text: "None", correct: true }
+    ]
+  },
+  {
+    question: "Which book did David write most of?",
+    answers: [
+      { text: "Psalms", correct: true },
+      { text: "Proverbs", correct: false },
+      { text: "Ecclesiastes", correct: false },
+      { text: "Song of Solomon", correct: false }
+    ]
+  },
+  
+  {
+    question: "Which book in the New Testament describes the vision of a series of end-time events, such as the Four Horsemen of the Apocalypse?",
+    answers: [
+      { text: "Revelation", correct: true },
+      { text: "Jude", correct: false },
+      { text: "2 Peter", correct: false },
+      { text: "2 Thessalonians", correct: false }
+    ]
+  },  
   {
     question: "Who was the father of John the Baptist?",
     answers: [
@@ -288,7 +470,6 @@ const questions = [
       { text: "Unknown", correct: true }
     ]
   },
-  
   {
     question: "In which book of the Bible do we find the story of Samson and Delilah?",
     answers: [
@@ -296,15 +477,6 @@ const questions = [
       { text: "Genesis", correct: false },
       { text: "Exodus", correct: false },
       { text: "1 Kings", correct: false }
-    ]
-  },
-  {
-    question: "Which mountain did God give Moses the Ten Commandments?",
-    answers: [
-      { text: "Mount Zion", correct: false },
-      { text: "Mount Sinai", correct: true },
-      { text: "Mount Everest", correct: false },
-      { text: "Mount Ararat", correct: false }
     ]
   },
   {
@@ -316,6 +488,16 @@ const questions = [
       { text: "Silas", correct: false }
     ]
   },
+  {
+    question: "Which king of Israel wrote many of the Psalms found in the Old Testament?",
+    answers: [
+      { text: "David", correct: true },
+      { text: "Solomon", correct: false },
+      { text: "Hezekiah", correct: false },
+      { text: "Josiah", correct: false }
+    ]
+  },
+  
   {
     question: "Which river was Jesus was baptized in?",
     answers: [
@@ -587,6 +769,115 @@ const questions = [
     ]
   },
   {
+    question: "Which mountain did God give Moses the Ten Commandments?",
+    answers: [
+      { text: "Mount Zion", correct: false },
+      { text: "Mount Sinai", correct: true },
+      { text: "Mount Everest", correct: false },
+      { text: "Mount Ararat", correct: false }
+    ]
+  },
+  {
+    question: "Which book of the Bible contains the Ten Commandments?",
+    answers: [
+      { text: "Exodus", correct: true },
+      { text: "Leviticus", correct: false },
+      { text: "Numbers", correct: false },
+      { text: "Deuteronomy", correct: false }
+    ]
+  },
+  {
+    question: "What is the first of the Ten Commandments?",
+    answers: [
+      { text: "You shall have no other gods before me.", correct: true },
+      { text: "You shall not make for yourself an idol.", correct: false },
+      { text: "Remember the Sabbath day, to keep it holy.", correct: false },
+      { text: "Honor your father and your mother.", correct: false }
+    ]
+  },
+  {
+    question: "What is the second of the Ten Commandments?",
+    answers: [
+      { text: "You shall not make for yourself an idol.", correct: true },
+      { text: "You shall have no other gods before me.", correct: false },
+      { text: "Remember the Sabbath day, to keep it holy.", correct: false },
+      { text: "Honor your father and your mother.", correct: false }
+    ]
+  },
+  {
+    question: "What is the third of the Ten Commandments?",
+    answers: [
+      { text: "You shall not take the name of the Lord your God in vain.", correct: true },
+      { text: "You shall have no other gods before me.", correct: false },
+      { text: "Remember the Sabbath day, to keep it holy.", correct: false },
+      { text: "Honor your father and your mother.", correct: false }
+    ]
+  },
+  {
+    question: "What is the fourth of the Ten Commandments?",
+    answers: [
+      { text: "Remember the Sabbath day, to keep it holy.", correct: true },
+      { text: "You shall have no other gods before me.", correct: false },
+      { text: "You shall not make for yourself an idol.", correct: false },
+      { text: "Honor your father and your mother.", correct: false }
+    ]
+  },
+  {
+    question: "What is the fifth of the Ten Commandments?",
+    answers: [
+      { text: "Honor your father and your mother.", correct: true },
+      { text: "You shall have no other gods before me.", correct: false },
+      { text: "You shall not make for yourself an idol.", correct: false },
+      { text: "Remember the Sabbath day, to keep it holy.", correct: false }
+    ]
+  },
+  {
+    question: "What is the sixth of the Ten Commandments?",
+    answers: [
+      { text: "You shall not murder.", correct: true },
+      { text: "You shall not steal.", correct: false },
+      { text: "You shall not commit adultery.", correct: false },
+      { text: "You shall not bear false witness against your neighbor.", correct: false }
+    ]
+  },
+  {
+    question: "What is the seventh of the Ten Commandments?",
+    answers: [
+      { text: "You shall not commit adultery.", correct: true },
+      { text: "You shall not murder.", correct: false },
+      { text: "You shall not steal.", correct: false },
+      { text: "You shall not bear false witness against your neighbor.", correct: false }
+    ]
+  },
+  {
+    question: "What is the eighth of the Ten Commandments?",
+    answers: [
+      { text: "You shall not steal.", correct: true },
+      { text: "You shall not murder.", correct: false },
+      { text: "You shall not commit adultery.", correct: false },
+      { text: "You shall not bear false witness against your neighbor.", correct: false }
+    ]
+  },
+  {
+    question: "What is the ninth of the Ten Commandments?",
+    answers: [
+      { text: "You shall not bear false witness against your neighbor.", correct: true },
+      { text: "You shall not murder.", correct: false },
+      { text: "You shall not steal.", correct: false },
+      { text: "You shall not commit adultery.", correct: false }
+    ]
+  },
+  {
+    question: "What is the tenth of the Ten Commandments?",
+    answers: [
+      { text: "You shall not covet.", correct: true },
+      { text: "You shall not murder.", correct: false },
+      { text: "You shall not steal.", correct: false },
+      { text: "You shall not commit adultery.", correct: false }
+    ]
+  },
+                
+  {
     question: "Which disciple wrote the book of Revelation?",
     answers: [
       { text: "Peter", correct: false },
@@ -595,6 +886,7 @@ const questions = [
       { text: "Matthew", correct: false }
     ]
   }
+  
 
 ];
     

@@ -8,7 +8,7 @@ const retryButton = document.getElementById("retry");
 questionElement.style.opacity = ".85";
 choicesElement.style.opacity = ".75";
 retryButton.style.display = "none";
-bgimage.style.opacity = ".98";
+bgimage.style.opacity = ".9";
 
 let currentQuestionIndex = 0;
 let remainingQuestions = [];
@@ -21,7 +21,7 @@ function startGame() {
   currentQuestionIndex = 0;
   score = 0;
   showQuestion();
-  bgimage.style.opacity = ".95";
+  bgimage.style.opacity = ".9";
   var all = document.querySelectorAll("#choices button");
   for (let choiceBtn of all) { choiceBtn.disabled = false; }
   questionElement.style.opacity = ".85";
