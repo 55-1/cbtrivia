@@ -5,6 +5,8 @@ body {
     font-size: 18px;
     background: #0b1316;
     color: #ccc;
+    height:100vh;
+    margin:0;
 }
 
 #question {
