@@ -35,7 +35,6 @@ const questions = [
       { text: "Malchus' servant girl", correct: true }
     ]
   },
-  
   {
     question: "Who was the man who helped Jesus carry his cross to Golgotha?",
     answers: [
@@ -45,7 +44,6 @@ const questions = [
       { text: "Timothy", correct: false }
     ]
   },
-  
   {
     question: "Which high priest presided over the trial of Jesus?",
     answers: [
@@ -55,7 +53,6 @@ const questions = [
       { text: "Herod", correct: false }
     ]
   },
-  
   {
     question: "Who was the last judge of Israel before the monarchy began?",
     answers: [
@@ -65,7 +62,6 @@ const questions = [
       { text: "Gideon", correct: false }
     ]
   },
-  
   {
     question: "Which Old Testament prophet was taken up to heaven in a whirlwind?",
     answers: [
@@ -183,8 +179,7 @@ const questions = [
       { text: "Ahasuerus", correct: false },
       { text: "Vashti", correct: false }
     ]
-  },
-    
+  }, 
   {
     question: "In the book of Ruth, who was Naomi's daughter-in-law who stayed with her after her husband died?",
     answers: [
@@ -194,8 +189,6 @@ const questions = [
       { text: "Sarah", correct: false }
     ]
   },
-  
-  
   {
     question: "In the book of Exodus, what were the names of Moses' siblings?",
     answers: [
@@ -205,7 +198,6 @@ const questions = [
       { text: "Simeon and Dinah", correct: false }
     ]
   },
-  
   {
     question: "Which apostle was a zealot before becoming a follower of Jesus?",
     answers: [
@@ -215,7 +207,6 @@ const questions = [
       { text: "Simon", correct: true }
     ]
   },
-  
   {
     question: "What was the occupation of the apostle Matthew before he followed Jesus?",
     answers: [
@@ -288,7 +279,6 @@ const questions = [
       { text: "Jeroboam", correct: false }
     ]
   },
-  
   {
     question: "Who is the author of the Book of Hebrews?",
     answers: [
@@ -308,7 +298,6 @@ const questions = [
       { text: "1 Kings", correct: false }
     ]
   },
-  
   {
     question: "Which mountain did God give Moses the Ten Commandments?",
     answers: [
@@ -417,7 +406,6 @@ const questions = [
       { text: "Mary", correct: false }
     ]
   },
-  
   {
     question: "Who was sold into slavery by his own brothers?",
     answers: [
@@ -490,7 +478,6 @@ const questions = [
       { text: "Leah", correct: false }
     ]
   },
-  
   {
     question: "Who was sold into slavery by his brothers and later became a powerful ruler in Egypt?",
     answers: [
@@ -500,7 +487,6 @@ const questions = [
       { text: "Abraham", correct: false }
     ]
   },
-
   {
     question: "Who gave birth to Samuel after praying to God for a child?",
     answers: [
@@ -537,7 +523,6 @@ const questions = [
       { text: "Seth", correct: false }
     ]
   },
-  
   {
     question: "In the book of Matthew, how many wise men came to visit Jesus after his birth?",
     answers: [
@@ -547,7 +532,6 @@ const questions = [
       { text: "The Bible only says 'wise men', not a specific number", correct: true }
     ]
   },
-  
   {
     question: "In the book of Judges, which judge defeated the Canaanites with the help of Jael?",
     answers: [
@@ -557,7 +541,6 @@ const questions = [
       { text: "Ehud", correct: false }
     ]
   },
-  
   {
     question: "In the book of Exodus, what was the name of the sister of Moses who watched over him in the bulrushes?",
     answers: [
@@ -567,7 +550,6 @@ const questions = [
       { text: "Rachel", correct: false }
     ]
   },
-  
   {
     question: "In the book of Leviticus, which high priest wore a breastplate with twelve precious stones representing the twelve tribes of Israel?",
     answers: [
@@ -577,7 +559,6 @@ const questions = [
       { text: "Zadok", correct: false }
     ]
   },
-    
   {
     question: "In the book of Genesis, which son of Isaac was tricked out of his birthright by his brother?",
     answers: [
@@ -587,7 +568,6 @@ const questions = [
       { text: "Benjamin", correct: false }
     ]
   },
-  
   {
     question: "In the New Testament, which Pharisee came to Jesus at night to ask him questions?",
     answers: [
@@ -597,7 +577,6 @@ const questions = [
       { text: "Gamaliel", correct: false }
     ]
   },
-  
   {
     question: "In the book of Hosea, what was the name of the prophet's unfaithful wife?",
     answers: [
@@ -607,7 +586,6 @@ const questions = [
       { text: "Esther", correct: false }
     ]
   },
-  
   {
     question: "Who was taken to be the wife of King Ahasuerus and became the queen of Persia?",
     answers: [
@@ -630,3 +608,4 @@ const questions = [
 ];
     
     export default questions;
+    

@@ -7,7 +7,6 @@ body {
     color: #ccc;
 }
 
-
 #question {
     font-family: 'Jost', sans-serif;
     color: #ddd;
@@ -15,34 +14,28 @@ body {
     font-weight: bold;
     padding: 20px 20px 10px 20px;
     text-align: center;
-    opacity:0;
+    opacity: 0;
     transition: opacity 2s;
-
 }
 
 #choices {
     margin-bottom: 0;
-    text-align:center;
-    opacity:0;
+    text-align: center;
+    opacity: 0;
     transition: opacity 2s;
 }
-
 
 .choice {
     font-family: 'Jost', sans-serif;
     letter-spacing: 1px;
-    background:transparent;
-    border:0;
+    background: transparent;
+    border: 0;
     font-size: 17px;
     display: inline-block;
     padding: 5px 12px;
     color: #fff;
-
     cursor: pointer;
-
 }
-
-
 
 .choice:hover,
 #retry:hover {
@@ -59,10 +52,10 @@ body {
 }
 
 #bottom-middle {
-position: fixed;
-bottom: 0;
-left: 50%;
-transform: translateX(-50%);
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 #retry {
@@ -89,11 +82,10 @@ transform: translateX(-50%);
     letter-spacing: 1px;
     font-weight: bold;
     text-align: center;
-    padding-bottom:20px;
+    padding-bottom: 20px;
     margin: 0 auto;
     color: #ccc;
 }
-
 
 #bgimage {
     position: fixed;
@@ -101,12 +93,9 @@ transform: translateX(-50%);
     left: 0;
     width: 100%;
     height: 100%;
-    opacity:.02;
+    opacity: 0;
     background-image: url("images/background.jpg");
     background-repeat: no-repeat;
     background-size: contain;
-    z-index: -1;
     transition: opacity 2s;
-    /* transition: opacity 3s ease-in-out;*/
 }
-
