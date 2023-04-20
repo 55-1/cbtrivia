@@ -31,7 +31,7 @@ button {
 
 .choice {
     background: transparent;
-    font-size: 18px;
+    font-size: 20px;
     border: 0;
     margin:auto;
     padding: 5px 12px;
@@ -75,7 +75,7 @@ button {
 }
 
 #score {
-    font-size: 17px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     padding-bottom: 20px;
@@ -95,16 +95,33 @@ button {
 
 @media screen and (max-width: 720px) {
     #question {
-        font-size: 22px;
+        font-size: 24px;
+        padding: 20px 20px 15px 20px;
     }
     .choice {
-        font-size: 17px;
+        font-size: 24px;
         margin: auto;
+        padding: 15px 15px;
         display: block;
+
     }
     #bgimage {
         inset: auto auto 0 0;
         width: 50%;
         height: 50%;
     }
+#bottom-middle {
+        position: fixed;
+        inset: auto 30px 0 auto;
+        transform: none;
+
+    }
+    #retry {
+        margin: 0 0 20px 0;
+        float: right;
+    }
+    #score {
+        float: right;
+    }
+
 }
