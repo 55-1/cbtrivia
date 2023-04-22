@@ -1,10 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@200&display=swap');
+@font-face {
+    font-family: 'Jost';
+    src: url('Jost-VariableFont_wght.ttf') format('truetype');
+}
 
 body {
     font-size: 18px;
     background: #0b1316;
     height: 100vh;
     margin: 0;
+
 }
 
 body,
@@ -21,6 +25,7 @@ button {
     padding: 20px 20px 10px 20px;
     opacity: 0;
     transition: opacity 2s;
+font-weight:300;
 }
 
 #choices {
@@ -30,9 +35,11 @@ button {
 }
 
 .choice {
+    font-weight:200;
     background: transparent;
     font-size: 20px;
-    border: 0;
+    min-width:220px;
+    border:0;
     margin:auto;
     padding: 5px 12px;
     display: block;
@@ -61,7 +68,7 @@ button {
 
 #retry {
     font-size: 20px;
-    font-weight: bold;
+    font-weight:300;
     background: transparent;
     display: block;
     max-width: 150px;
@@ -76,7 +83,7 @@ button {
 
 #score {
     font-size: 18px;
-    font-weight: bold;
+    font-weight:300;
     text-align: center;
     padding-bottom: 20px;
     margin: 0 auto;
@@ -125,3 +132,5 @@ button {
     }
 
 }
+
+
