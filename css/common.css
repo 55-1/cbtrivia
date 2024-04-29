@@ -4,6 +4,7 @@ body {
   background: #222;
   margin: 0;
 	font: 400 22px/1.2 "Jost", sans-serif; color: #ccc;
+	overflow: hidden;
 }
 
 #botMenu {display:grid; justify-self:end; grid-area: botMenu;  grid-template-columns: auto auto auto;}

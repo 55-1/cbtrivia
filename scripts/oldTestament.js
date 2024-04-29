@@ -32,13 +32,22 @@ document.addEventListener("DOMContentLoaded", function() {
     chaptersElement.appendChild(fragment);
 
     const oldTestamentCheckboxes = document.querySelectorAll("input[type='checkbox']:not(:disabled)");
+
+    oldTestamentCheckboxes.forEach((checkbox) => {
+      checkbox.addEventListener("change", () => {
+        if (checkbox.id !== "toggleAll") {localStorage.setItem(checkbox.id, checkbox.checked.toString());}
+        console.log(checkbox.id, checkbox.checked);
+        console.log(localStorage);
+      });
+    });
+
     const toggleAllCheckbox = document.getElementById("toggleAll");
 
     toggleAllCheckbox.addEventListener("change", () => {
       oldTestamentCheckboxes.forEach((checkbox) => {
-        if (checkbox.id !== "toggleAll" && !checkbox.disabled && activeBooks.has(checkbox.value)) {
+        if (checkbox.disabled === false && checkbox !== toggleAllCheckbox) {
           checkbox.checked = toggleAllCheckbox.checked;
-          localStorage.setItem(checkbox.id, checkbox.checked.toString());
+          if (checkbox.id !== "toggleAll") {localStorage.setItem(checkbox.id, checkbox.checked.toString());}
         }
       });
     });
