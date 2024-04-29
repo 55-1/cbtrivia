@@ -1,0 +1,33 @@
+@font-face {font-family: "Jost"; src: url("../assets/jost.ttf") format("truetype");}
+
+body {
+  background: #222;
+  margin: 0;
+	font: 400 22px/1.2 "Jost", sans-serif; color: #ccc;
+}
+
+#botMenu {display:grid; justify-self:end; grid-area: botMenu;  grid-template-columns: auto auto auto;}
+
+#botMenu a {
+  background: #222;
+  min-width: 160px;
+  border: 2px solid #fff;
+	font-size:clamp(18px, 2vw, 20px);
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	opacity: 0.7;
+	position: relative;
+	display: inline-block;
+	align-content: center;
+}
+
+#botMenu a:hover {text-decoration: underline; opacity: .9; top: -1px;}
+#botMenu a:active {top:1px;}
+
+#botMenu a[disabled] {
+  text-decoration: none;
+	cursor: default;
+	opacity: 0.2;
+	top: auto;
+}
