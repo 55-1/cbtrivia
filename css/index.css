@@ -30,9 +30,10 @@
 #menu > button:nth-child(2):last-child {grid-column: unset;}
 
 
-
 #chapter {
-	padding:15px;
+	border:none;
+	width:auto;
+	margin:0; padding:15px;
 	font-size:clamp(12px, 6vw, 20px);
 	opacity:0; transition: opacity 2s; 
 	grid-area: chapter; justify-self: end; align-content: end;

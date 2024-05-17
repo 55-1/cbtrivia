@@ -14,6 +14,12 @@ function displayTrivia() {
 
 	questionElement.innerText = currentQuestion.question;
 	chapterElement.innerText = currentQuestion.chapter;
+	chapterElement.addEventListener("click", function() {
+    const chapter = this.innerText;
+    const url = `https://www.biblegateway.com/passage/?search=${chapter}&version=ERV`;
+    window.open(url, '_blank');
+});
+	
 
 	currentQuestion.answers.forEach((answer, index) => {
 		const radioButton = document.createElement("input");
