@@ -9,19 +9,16 @@
 
 <body>
   <div id="grid">
-
+    <nav id="menu">
+     <button onclick="window.location.href='index.html';">Close</button><button onclick="window.location.href='oldTestament.html';">Chapters</button>
+    </nav>
     <div id="container">
       <h2 id="optTitle">Quiz Length</h2>
       <div class="decrement">-</div>
       <input type="number" name="quizLength" id="quizLength" min="5" max="100" value="15" step="5">
       <div class="increment">+</div>
     </div>
-
-  <nav id="botMenu">
-    <button id="continue" disabled>Continue</button><button onclick="window.location.href='index.html';">Close</button><button onclick="window.location.href='oldTestament.html';">Chapters</button>
-  </nav>
-</div>
-
+  </div>
   <script type="module" src="scripts/options.js"></script>
 </body>
 </html>

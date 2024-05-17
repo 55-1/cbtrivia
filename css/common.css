@@ -1,32 +1,47 @@
 @font-face {font-family: "Jost"; src: url("../assets/jost.ttf") format("truetype");}
 
+* {margin: 0; padding: 0; box-sizing: border-box;}
+input[type="radio"], input[type="checkbox"] {display: none;}
+
 body {
   background: #222;
-  margin: 0;
 	font: 400 22px/1.2 "Jost", sans-serif; color: #ccc;
-	overflow: hidden;
 }
 
-#botMenu {display:grid; justify-self:end; grid-area: botMenu;  grid-template-columns: auto auto auto;}
+#grid {height:100vh;}
 
-#botMenu button {
-  background: #222;
-  min-width: 170px;
+button {
+	display:block;
+	width:100%; max-width:200px; 
+	background: #222;
+	margin: auto; padding: 10px 5px;
   border: 2px solid #fff;
 	font: 400 22px/1.2 "Jost", sans-serif;
-	font-size:clamp(18px, 2vw, 20px);
+	font-size: clamp(0.875rem, 0.8rem + 1.2vw, 1.25rem);
 	color: #fff;
 	opacity: 0.7;
 	position: relative;
-	cursor:pointer;
+	cursor: pointer;
 }
+button:hover {text-decoration: underline; opacity: .9; top: -1px;}
+button:active {top:1px;}
 
-#botMenu button:hover {text-decoration: underline; opacity: .9; top: -1px;}
-#botMenu button:active {top:1px;}
-
-#botMenu button[disabled] {
+button[disabled] {
   text-decoration: none;
 	cursor: default;
 	opacity: 0.2;
 	top: auto;
+}
+
+#menu {display:grid; grid-template-columns: 1fr 1fr 1fr;
+	max-width: 600px; margin:0 auto;
+	grid-area: menu;
+	width: 100%;
+	align-content:start;
+}
+#menu > button:nth-child(2):last-child {grid-column: 3;}
+ 
+
+@media screen and (max-width: 600px) {
+	#menu {display: block;} #menu button {width:100%; max-width:inherit;}
 }

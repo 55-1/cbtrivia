@@ -2,21 +2,18 @@
 <head>
   <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Candlelit Bible Trivia - Options</title>
-  <link rel="stylesheet" type="text/css" href="css/oldTestament.css">
+  <link rel="stylesheet" type="text/css" href="css/chapters.css">
   <link rel="icon" type="image/svg+xml" sizes="any" href="data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22%3E%3Ctext%20y=%22.9em%22%20font-size=%2290%22%3E🕯️%3C/text%3E%3C/svg%3E">
 </head>
 <body>
-<div id="grid">
 
+  <nav id="menu">
+    <button onclick="window.location.href='options.html';">Close</button>  <button disabled>Old Testament</button><button onclick="window.location.href='newTestament.html';">New Testament</button>
+  </nav>
   <div id="chapters">
     <input type="checkbox" id="toggleAll">
     <label for="toggleAll">Toggle All</label>
   </div>
-
-  <nav id="botMenu">
-    <button disabled>Old Testament</button><button onclick="window.location.href='newTestament.html';">New Testament</button><button onclick="window.location.href='index.html';">Close</button>
-  </nav>
-</div>
 
   <script type="module" src="scripts/oldTestament.js"></script>
 </body>

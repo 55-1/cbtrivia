@@ -1,7 +1,7 @@
 import { shuffleQuestions, filteredQuestions } from './utils.js';
 
-const ELEMENT_IDS = ["bgImage", "bgImage2", "chapter", "question", "choices", "score", "continue"];
-const [bgImage, bgImage2, chapterElement, questionElement, choiceElement, scoreElement, continueLink] = ELEMENT_IDS.map(id => document.getElementById(id));
+const ELEMENT_IDS = ["options","bgImage", "bgImage2", "chapter", "question", "choices", "score", "continue"];
+const [optionsElement, bgImage, bgImage2, chapterElement, questionElement, choiceElement, scoreElement, continueLink] = ELEMENT_IDS.map(id => document.getElementById(id));
 
 const quizLength = localStorage.getItem('quizLength') || 15;
 let score = 0;
@@ -72,10 +72,18 @@ function endGame() {
 	} else {
 		scoreElement.innerText = `Your Score is ${score} out of ${quizLength}! Keep trying!`;
 	}
+	
+	optionsElement.style.opacity = "0";
+	setTimeout(function() {optionsElement.style.display = 'none';}, 1000);
+	
+	continueLink.style.opacity = ".1";
+	setTimeout(function() {
+			continueLink.style.display = 'block';
+			setTimeout(function() {continueLink.style.opacity = ".7";}, 50);
+	}, 1000);
 
-	continueLink.removeAttribute('disabled');
 	continueLink.addEventListener('click', continueGame);
-	continueLink.style.opacity = ".7";
+
 	bgImage.style.opacity = "0";
 	bgImage2.style.opacity = ".5";
 	hideQuestions();
@@ -86,8 +94,17 @@ function continueGame() {
 	score = 0;
 	scoreElement.style.opacity = "0";
 	setTimeout(() => {displayTrivia();}, 150);
-	continueLink.setAttribute('disabled', 'disabled');
-	continueLink.style.opacity = "0.2";
+
+	continueLink.removeEventListener('click', continueGame);
+	continueLink.style.opacity = "0";
+	setTimeout(function() {continueLink.style.display = 'none';}, 1000);
+
+	optionsElement.style.opacity = ".1";
+	setTimeout(function() {
+		optionsElement.style.display = 'block';
+			setTimeout(function() {	optionsElement.style.opacity = ".7";}, 50);
+	}, 1000);
+
 	bgImage.style.opacity = ".9";
 	bgImage2.style.opacity = "0";
 

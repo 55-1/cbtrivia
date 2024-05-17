@@ -1,0 +1,44 @@
+@import url('common.css');
+
+#chapters {
+max-width:600px;
+margin:auto;
+display: flex;
+flex-wrap: wrap; 
+}
+
+label {
+	font-size: clamp(0.875rem, 0.825rem + 0.8vw, 1.125rem);
+	opacity: 0.35;
+	position: relative;
+	flex-grow: 1;
+	text-align: center;
+}
+
+input:checked+label {opacity: 0.7;}
+input:checked+label:hover {opacity: 0.85;}
+
+label:hover {
+	top:-1px;
+	opacity: 0.5;
+	cursor: pointer;
+	text-decoration:underline;
+}
+
+label:active {top:1px;}
+
+input[type="checkbox"]+label {
+	border: 2px solid #fff;
+	padding:20px 10px;
+}
+
+input:disabled+label {
+	top:0;
+	cursor:default;
+	text-decoration:line-through;
+	opacity:.15;
+}
+
+input:disabled+label:hover {opacity:.1;}
+
+#toggleAll:not(:checked)+label {opacity: 0.7;}
