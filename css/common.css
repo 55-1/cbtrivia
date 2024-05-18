@@ -8,18 +8,18 @@ body {
 	font: 400 22px/1.2 "Jost", sans-serif; color: #ccc;
 }
 
-#grid {height:100vh;}
+#grid {min-height:100vh; margin-top:1px;}
 
 button {
 	display:block;
-	width:100%; max-width:200px; 
+	width:100%; max-width:200px;  height:100%;
 	background: #222;
 	margin: auto; padding: 10px 5px;
   border: 2px solid #fff;
 	font: 400 22px/1.2 "Jost", sans-serif;
 	font-size: clamp(0.875rem, 0.8rem + 1.2vw, 1.25rem);
 	color: #fff;
-	opacity: 0.7;
+	opacity: 0.8;
 	position: relative;
 	cursor: pointer;
 }
@@ -37,7 +37,6 @@ button[disabled] {
 	max-width: 600px; margin:0 auto;
 	grid-area: menu;
 	width: 100%;
-	align-content:start;
 }
 #menu > button:nth-child(2):last-child {grid-column: 3;}
  

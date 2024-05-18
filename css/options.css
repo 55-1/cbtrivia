@@ -2,11 +2,11 @@
 
 #grid {
 	display: grid; grid-template-areas:'menu' 'container';
-	grid-template-rows: 1fr 20fr;
+	grid-template-rows: minmax(auto, 45px) 5fr;
 }
 
 #container {
-	max-width: 150px;
+	max-width: 200px;
 	padding: 0; margin-bottom:5%;
 	display: grid; grid-template-areas: 'optTitle optTitle optTitle' 'decrement quizLength increment';
   grid-template-columns: 1fr 3fr 1fr;
@@ -17,26 +17,29 @@
 
 #optTitle {
 	margin:auto; padding:10px 5px;
-	font-size: clamp(0.875rem, 0.9rem + 1.2vw, 1.25rem);
+	font-size: 22px;
 	font-weight: normal;
 	grid-area: optTitle;
 	text-align: center;
 }
 
+
+
 .increment,.decrement {
 	border: 2px solid #fff;
-	font-size: clamp(0.75rem, 0.675rem + 1.2vw, 1.125rem);
+	font-size: 28px;
 	cursor: pointer;
-	opacity: 0.7;
+	opacity: 0.8;
 	text-align: center;
 	position: relative;
 	align-content: center;
-	min-width: 20px;
+	min-width: 50px;
+	padding-bottom: 4px;
 }
 
 .increment:hover,.decrement:hover {
 	text-decoration:underline;
-	opacity: .85;
+	opacity: .9;
 	top:-1px;
 }
 .increment:active, .decrement:active {top:1px;}
@@ -47,12 +50,18 @@ input[type="number"] {
 	background: #222;
 	border: 2px solid #fff;
 	text-align: center;
-	font-size: clamp(0.875rem, 0.8rem + 1.2vw, 1.25rem);
+	font-size: 21px;
 	color: #fff;
 	outline: none;
-	opacity: 0.7;
+	opacity: 0.8;
 	-moz-appearance: textfield;
 	width: 100%;
+	padding:10px;
 }
 
-input[type="number"]:hover, input[type="number"]:focus {opacity: 0.85;}
+input[type="number"]:hover, input[type="number"]:focus {opacity: 0.9;}
+
+
+@media screen and (max-width: 600px) {
+	#optTitle {font-size:clamp(12px, 10vw, 20px);}
+}

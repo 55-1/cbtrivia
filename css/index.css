@@ -1,5 +1,6 @@
 @import url('common.css');
 
+
 #bgImage, #bgImage2 {
 	width: clamp(20%, 6vw, 45%); height: 100%;
 	opacity: 0; transition: opacity 4s;
@@ -10,13 +11,13 @@
 #bgImage2 {background: url("../assets/background2.jpg") no-repeat left bottom; background-size: contain;}
 
 #grid {
-	display: grid; grid-template-areas:'menu menu' 'score score' 'trivia trivia' '. chapter';
-	grid-template-rows: 1fr 1fr 20fr 1fr;
+	display: grid; grid-template-areas:'menu menu' 'score score' 'trivia trivia' 'chapter chapter';
+	grid-template-rows: minmax(auto, 45px) minmax(auto, 55px) 5fr minmax(auto, 45px);
 }
 
 #score {
-	padding:20px 5px;
-	font-size:clamp(12px, 5vw, 22px);
+	padding-top: 15px;
+	font-size:20px;
 	text-align: center;
 	opacity: 0; transition: opacity 0.2s;
 	grid-area: score;
@@ -25,8 +26,8 @@
 }
 
 #menu {grid-template-columns: auto;}
-#options {opacity:.7; transition: opacity 1s;}
-#continue {display:none; opacity:0; transition: opacity 2s; justify-self: center;}
+#options {opacity:.8; transition: opacity 1s; padding:0; height: 100%;}
+#continue {display:none; opacity:0; transition: opacity 2s; justify-self: center; height: 100%;}
 #menu > button:nth-child(2):last-child {grid-column: unset;}
 
 
@@ -34,7 +35,7 @@
 	border:none;
 	width:auto;
 	margin:0; padding:15px;
-	font-size:clamp(12px, 6vw, 20px);
+	font-size:20px;
 	opacity:0; transition: opacity 2s; 
 	grid-area: chapter; justify-self: end; align-content: end;
 }
@@ -44,13 +45,17 @@ margin-bottom:10%;
 }
 
 #question {
-	margin: auto 5px; padding-bottom: 10px;
-	font-size: clamp(14px, 6vw, 25px);
+	margin: auto 5px;
+	padding-bottom: 10px;
+
+	font-size: 24px; 
+
 	text-align: center;
-	opacity: 0; transition: opacity 2s;
+	opacity: 0;
+	transition: opacity 2s;
 }
 
-#choices {font-size: clamp(12px, 6vw, 22px); opacity: 0; transition: opacity 2s;}
+#choices {font-size: 20px; opacity: 0; transition: opacity 2s;}
 
 #choices label {padding: 15px 5px; border: none;}
 
@@ -59,7 +64,7 @@ margin-bottom:10%;
 
 label:hover, input#toggleAll + label {
 	text-decoration: underline;
-	opacity: 0.85; transition: opacity 0.2s;
+	opacity: 0.9; transition: opacity 0.2s;
 }
 
 label:active {opacity: 0.6; top: 1px;}
@@ -77,7 +82,7 @@ label {
 	border: 2px solid #fff;
 	text-align: center;
 	cursor: pointer;
-	opacity: 0.7; transition: opacity 0.2s;
+	opacity: 0.8; transition: opacity 0.2s;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -87,10 +92,12 @@ label {
 
 
 @media screen and (max-width: 600px) {
-	#score {padding-top:10px; text-align: center;} #trivia {align-self: auto; margin-top: 0; margin-bottom:0;}
-	#question {width:auto;}
+	#score {padding-top:10px; font-size:clamp(12px, 6vw, 19px);} #trivia {align-self: auto; margin-top: 0; margin-bottom:0;}
+	#question {width:auto; font-size: clamp(12px, 6vw, 21px);} #choices {font-size: clamp(12px, 6vw, 19px);}
+	#chapter {font-size: clamp(12px, 6vw, 19px);}
 	#continue {max-width: 100%;}
 }
 @media screen and (max-height: 580px) {
 	#bgImage, #bgImage2 {display:none;}
+	#chapter {justify-self: center;}
 }

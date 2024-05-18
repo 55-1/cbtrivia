@@ -3,40 +3,80 @@ import { shuffleQuestions, filteredQuestions } from './utils.js';
 const ELEMENT_IDS = ["options","bgImage", "bgImage2", "chapter", "question", "choices", "score", "continue"];
 const [optionsElement, bgImage, bgImage2, chapterElement, questionElement, choiceElement, scoreElement, continueLink] = ELEMENT_IDS.map(id => document.getElementById(id));
 
+chapterElement.addEventListener("click", function() {
+	const [bookName, chapterNumber] = this.innerText.split(' ');
+	const bookNumber = getBookNumber(bookName);
+	const chapter = chapterNumber.split(':')[0]; 
+	const url = `https://ajbodev.github.io/Bible.html#/${bookNumber}/${chapter}`;
+	window.open(url, '_blank');
+});
+
 const quizLength = localStorage.getItem('quizLength') || 15;
 let score = 0;
 let currentQuestionIndex = 0;
 
+function getBookNumber(bookName) {
+	const bookNames = ["Genesis", "Exodus", "Leviticus", "Numbers", "Deuteronomy", "Joshua", "Judges", "Ruth", "1 Samuel", "2 Samuel", "1 Kings", "2 Kings", "1 Chronicles", "2 Chronicles", "Ezra", "Nehemiah", "Esther", "Job", "Psalms", "Proverbs", "Ecclesiastes", "Song of Solomon", "Isaiah", "Jeremiah", "Lamentations", "Ezekiel", "Daniel", "Hosea", "Joel", "Amos", "Obadiah", "Jonah", "Micah", "Nahum", "Habakkuk", "Zephaniah", "Haggai", "Zechariah", "Malachi", "Matthew", "Mark", "Luke", "John", "Acts", "Romans", "1 Corinthians", "2 Corinthians", "Galatians", "Ephesians", "Philippians", "Colossians", "1 Thessalonians", "2 Thessalonians", "1 Timothy", "2 Timothy", "Titus", "Philemon", "Hebrews", "James", "1 Peter", "2 Peter", "1 John", "2 John", "3 John", "Jude", "Revelation"];
+	return bookNames.indexOf(bookName) + 1;
+}
+
 function displayTrivia() {
 	const currentQuestion = filteredQuestions[currentQuestionIndex];
 
-	if (!currentQuestion) {questionElement.innerText = "There are no questions available. Select a chapter to begin.";	return;}
+	if (!currentQuestion) {
+			questionElement.innerText = "There are no questions available. Select a chapter to begin.";	
+			return;
+	}
 
-	questionElement.innerText = currentQuestion.question;
+	let questionText = currentQuestion.question;
+	if (questionText.length > 30) { // Adjust this length as per your requirement
+			let midPoint = Math.floor(questionText.length / 2);
+			const beforeMidPoint = questionText.lastIndexOf(' ', midPoint);
+			const afterMidPoint = questionText.indexOf(' ', midPoint);
+
+			if (beforeMidPoint === -1 || (afterMidPoint !== -1 && midPoint - beforeMidPoint >= afterMidPoint - midPoint)) {
+					midPoint = afterMidPoint;
+			} else {
+					midPoint = beforeMidPoint;
+			}
+
+			questionText = [questionText.slice(0, midPoint), '\n', questionText.slice(midPoint)].join('');
+	}
+
+	questionElement.innerText = questionText;
 	chapterElement.innerText = currentQuestion.chapter;
-	chapterElement.addEventListener("click", function() {
-    const chapter = this.innerText;
-    const url = `https://www.biblegateway.com/passage/?search=${chapter}&version=ERV`;
-    window.open(url, '_blank');
-});
+
 	
 
 	currentQuestion.answers.forEach((answer, index) => {
-		const radioButton = document.createElement("input");
-		radioButton.type = "radio";
-		radioButton.name = "answer";
-		radioButton.value = answer.text;
-		radioButton.id = `answer-${index}`;
-		if (answer.correct) {radioButton.dataset.correct = answer.correct;}
-		radioButton.addEventListener("click", selectAnswer);
-		choiceElement.appendChild(radioButton);
+    const radioButton = document.createElement("input");
+    radioButton.type = "radio";
+    radioButton.name = "answer";
+    radioButton.value = answer.text;
+    radioButton.id = `answer-${index}`;
+    if (answer.correct) {radioButton.dataset.correct = answer.correct;}
+    radioButton.addEventListener("click", selectAnswer);
+    choiceElement.appendChild(radioButton);
 
-		const label = document.createElement("label");
-		label.innerText = answer.text;
-		label.htmlFor = radioButton.id;
-		choiceElement.appendChild(label);
+    const label = document.createElement("label");
+    let answerText = answer.text;
+    if (answerText.length > 30) { // Adjust this length as per your requirement
+        let midPoint = Math.floor(answerText.length / 2);
+        const beforeMidPoint = answerText.lastIndexOf(' ', midPoint);
+        const afterMidPoint = answerText.indexOf(' ', midPoint);
 
-	});
+        if (beforeMidPoint === -1 || (afterMidPoint !== -1 && midPoint - beforeMidPoint >= afterMidPoint - midPoint)) {
+            midPoint = afterMidPoint;
+        } else {
+            midPoint = beforeMidPoint;
+        }
+
+        answerText = [answerText.slice(0, midPoint), '\n', answerText.slice(midPoint)].join('');
+    }
+    label.innerText = answerText;
+    label.htmlFor = radioButton.id;
+    choiceElement.appendChild(label);
+});
 }
 
 function selectAnswer(event) {
